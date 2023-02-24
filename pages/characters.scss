@@ -1,0 +1,167 @@
+ @use '../styles/partials/mixins' as *;
+ @use '../styles/partials/colors' as *;
+
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+
+body, html
+{
+  width: 100%;
+  height: 100%;
+  font-family: "Droid Sans", arial, verdana, sans-serif;
+	font-weight: 700;
+	color: $primary__star-yellow;
+	background-color: $primary__star-black;
+	overflow: hidden;
+}
+
+p#start
+{
+	position: relative;
+	font-size: 200%;
+	line-height: 2rem;
+	font-weight: 400;
+	margin-top: 10rem;
+	color: $primary__star-yellow;
+	opacity: 0;
+	z-index: 1;
+	-webkit-animation: intro 4s ease-out;
+	animation: intro 4s ease-out;
+}
+
+
+h1
+{
+	position: absolute;
+	width: 2.6em;
+	left: 50%;
+	top: 25%;
+	font-size: 10em;
+	text-align: center;
+	margin-left: -1.3em;
+	line-height: 0.8em;
+	letter-spacing: -0.05em;
+	color: $primary__star-black;
+	text-shadow: -2px -2px 0 $primary__star-yellow, 2px -2px 0 $primary__star-yellow, -2px 2px 0 $primary__star-yellow, 2px 2px 0 $primary__star-yellow;
+	opacity: 0;
+	z-index: 1;
+	-webkit-animation: logo 6s ease-out 2.5s;
+	animation: logo 6s ease-out 2.5s;
+}
+
+h1 sub
+{
+	display: block;
+	font-size: 0.3em;
+	letter-spacing: 0;
+	line-height: 0.8em;
+}
+
+#titles
+{
+	position: absolute;
+	width: 10em;
+	height: 50em;
+	bottom: 0;
+	left: 50%;
+	line-height: 3rem;
+	margin-left: -5em;
+	font-size: 350%;
+	text-align: justify;
+	overflow: hidden;
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 80%;
+	-webkit-transform: perspective(300px) rotateX(25deg);
+	transform: perspective(300px) rotateX(25deg);
+
+	@include for--mobile{
+		width: 25em;
+		margin-left: -4em;
+		font-size: 100%;
+	
+	}
+	@include for--tablet{
+		width: 18em;
+		margin-left: -9em;
+		font-size: 100%;
+	
+	}
+}
+
+#titles:after
+{
+	position: absolute;
+	content: ' ';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 60%;
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	pointer-events: none;
+}
+
+#titles p
+{
+	text-align: justify;
+	margin: 0.8em 0;
+}
+
+#titles p.center
+{
+	text-align: center;
+	font-size: 2rem;
+	line-height: 3rem;
+}
+
+#titles a
+{
+	color: $primary__star-yellow;
+	text-decoration: underline;
+}
+
+#titlecontent
+{
+	position: absolute;
+	top: 100%;
+	-webkit-animation: scroll 400s linear 3s infinite;
+	animation: scroll 400s linear 3s infinite;
+}
+
+@-webkit-keyframes logo {
+	0% { -webkit-transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { -webkit-transform: scale(0.1); opacity: 0; }
+}
+
+
+@keyframes logo {
+	0% { transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { transform: scale(0.1); opacity: 0; }
+}
+
+@-webkit-keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+
+@keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-webkit-keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+
+
+@keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}

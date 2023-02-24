@@ -1,0 +1,12 @@
+$flex-center-props: (
+  display: flex,
+  flex-direction: column,
+  justify-content: center,
+  align-content: center
+);
+
+@mixin flex-center {
+    @each $prop, $value in $flex-center-props {
+      #{$prop}: map-get($flex-center-props, $prop);
+    }
+  }

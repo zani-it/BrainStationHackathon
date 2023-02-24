@@ -1,0 +1,91 @@
+$font-title: "starWarTitle", sans-serif;
+$font-text: "starWarText", sans-serif;
+
+
+@font-face {
+    font-family: "starWarTitle";
+    src: url('../../src/fonts/Starjhol.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "starWarText";
+    src: url('../../src/fonts/SfDistantGalaxy-0l3d.ttf');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+
+  @media (min-width: 1280px) {
+    h1 {
+      font-family: "starWarTitle", sans-serif;
+      font-size: 3.75rem;
+      line-height: 4.25rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 0.2rem;
+      transition: font-size 1s;
+      text-justify: distribute;
+    }
+  }
+  @media (min-width: 768px) {
+    h1 {
+      font-family: "starWarTitle", sans-serif;
+      font-size: 3.75rem;
+      line-height: 4.25rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 0.2rem;
+      transition: font-size 1s;
+      text-justify: distribute;
+    }
+  }
+  @media (max-width: 767px) {
+    h1 {
+      font-family: "starWarTitle", sans-serif;
+      font-size: 2rem;
+      line-height: 2rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 0.2rem;
+      transition: font-size 1s;
+      text-justify: distribute;
+    }
+  }
+
+
+
+@media (min-width: 1280px) {
+    .font__body, h4, p, a {
+      font-family: "starWarText", sans-serif;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      font-weight: 400;
+      margin: 0;
+      letter-spacing: 0.2rem;
+      transition: font-size 1s;
+    }
+  }
+  @media (min-width: 768px) {
+    .font__body, h4, p, a {
+      font-family: "starWarText", sans-serif;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      font-weight: 400;
+      margin: 0;
+      letter-spacing: 0.2rem;
+      transition: font-size 1s;
+    }
+  }
+  @media (max-width: 767px) {
+    .font__body, h4, p, a {
+      font-family: "starWarText", sans-serif;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-weight: 400;
+      margin: 0;
+      letter-spacing: 0.2rem;
+      transition: font-size 1s;
+    }
+  }
